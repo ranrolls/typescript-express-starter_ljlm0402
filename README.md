@@ -3,7 +3,7 @@
   <img src="https://github.com/ljlm0402/typescript-express-starter/raw/images/logo.jpg" alt="Project Logo" />
   <br>
     <br>
-  TypeScript Express Starter
+  Rock and roll : TypeScript Express Starter
   <br>
 </h1>
 
