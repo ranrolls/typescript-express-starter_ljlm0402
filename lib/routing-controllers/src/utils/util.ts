@@ -4,6 +4,7 @@
  * @returns {Boolean} true & false
  * @description this value is Empty Check
  */
+import buffer from 'buffer'
 export const isEmpty = (value: string | number | object): boolean => {
   if (value === null) {
     return true;
@@ -15,5 +16,19 @@ export const isEmpty = (value: string | number | object): boolean => {
     return true;
   } else {
     return false;
+  }
+};
+export const universalBtoa = str => {
+  try {
+      return btoa(str);
+  } catch (err) {
+      return Buffer.from(str).toString('base64');
+  }
+};
+export const universalAtob = b64Encoded => {
+  try {
+      return atob(b64Encoded);
+  } catch (err) {
+      return Buffer.from(b64Encoded, 'base64').toString();
   }
 };
