@@ -1,7 +1,6 @@
 import SockRouteService from "./routes/sockRoutes";
 let sockRouteServiceInst = null;
 export default class SockService {
-    
     public static init = async (sockInterface) => {
         //  ns1         name_space
         sockInterface.ws('/ns1', (ws, req) => {
@@ -14,7 +13,6 @@ export default class SockService {
             }            
             ws =  null; req = null;
         })
-
         //  default     name_space
         /*
         sockInterface.ws('/', function (ws, req) {

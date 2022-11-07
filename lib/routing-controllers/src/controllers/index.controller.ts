@@ -11,9 +11,14 @@ export class IndexController {
   sock() {
     return 'OK';
   }
+  @Get('/sock/io')
+  @Render('sock/io.html')
+  socketIO() {
+    return 'using socket.io';
+  }
   @Get('/sock/r1')
   @Render('sock/room1.html')
   room1() {
-    return 'OK';
+    return 'using ws';
   }
 }
